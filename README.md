@@ -14,9 +14,9 @@ The local cvmfs caches can be found in three different states:
 - **hot**: cvmfs disk and in-memory caches available; in-memory kernel managed cache available
 
 Script usage:  
-`./profiling_tools/helpers/cache_times.sh <cache_state> <script_name>`  
+`./profiling_tools/helpers/cache_times.sh <cache_state> <benchmark_name>`  
 For example:  
-`./profiling_tools/helpers/cache_times.sh  cold benchmarks/lhcb_benchmark/lhcb_benchmark.sh`
+`./profiling_tools/helpers/cache_times.sh  cold lhcb_benchmark`
 
 ## avg_cache_times.sh ##
 This script runs `cache_times.sh` for each type of cache in a number of rounds, computing the average
@@ -25,7 +25,7 @@ running time and the average ratios between different cache types.
 Script usage:
 `./profiling_tools/avg_cache_time.sh <benchmark> <number_of_rounds>`  
 For example:
-`/profiling_tools/avg_cache_time.sh benchmarks/lhcb_benchmark/lhcb_benchmark.sh 2`
+`/profiling_tools/avg_cache_time.sh lhcb_benchmark 2`
 
 ## generate_flamegraphs.sh ##
 This script profiles processes associated with mounted cvmfs repos and creates
