@@ -1,3 +1,3 @@
 {
-    "repo": "lhcb.cern.ch"
+    "repo": ["lhcb.cern.ch"]
 }
